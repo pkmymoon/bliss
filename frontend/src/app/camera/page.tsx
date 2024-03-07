@@ -15,7 +15,7 @@ const ImageUploader = () => {
         formData.append("image", image);
 
         try {
-            const response = await fetch("http://localhost:3001/api/image", {
+            const response = await fetch("http://localhost:3000/", {
                 method: "POST",
                 body: formData,
             });
