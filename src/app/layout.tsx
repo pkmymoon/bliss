@@ -2,6 +2,7 @@ import NavBottom from "@/components/NavBottom";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Toaster } from "react-hot-toast";
 export const metadata = {
     title: "Bliss - Citizen Ai Partner",
     description: "",
@@ -16,9 +17,10 @@ export default async function RootLayout({
         <html lang="en">
             <body className={`${inter.className}`}>
                 <Navbar/>
-                <main className="min-h-screen mb-8 bg-background max-w-7xl mx-auto">
+                <main className=" relative h-screen overflow-hidden bg-background max-w-7xl mx-auto">
                     {children}
                 </main>
+                <Toaster/>
                 <NavBottom />
             </body>
         </html>
